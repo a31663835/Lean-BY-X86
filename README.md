@@ -16,7 +16,7 @@
 -  `.config` 文件是使用 [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) 的源代码创建的. ( 您可以通过工作流'workflow'文件中的环境变量进行更改。 )
 - 将 '.config' 文件推送到 GitHub 存储库。
 - 在Action页面上选择选择 `Build OpenWrt` 。
-- 单击 `Run workflow` 按钮。
+- 单击 `Run workflow` 按钮。ssh连接选择false
 - 构建完成后，单击Artifacts操作页面右上角的按钮下载二进制文件。
 
 ## 提示
