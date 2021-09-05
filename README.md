@@ -6,11 +6,11 @@
 ![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
 ![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
 
-此仓库来自于[**P3TERX**](https://p3terx.com)大佬
+## 此仓库来自于[**P3TERX**](https://p3terx.com)大佬
 
-##注意：开启ssh连接会出现错误，所以请提前本地make menuconfig，把生成的.config文件上传到仓库的根目录后在进行运行自动话脚本，run workflow是ssh连接选择false
+## 注意：开启ssh连接会出现错误，所以请提前本地make menuconfig，把生成的.config文件上传到仓库的根目录后在进行运行自动话脚本，run workflow是ssh连接选择false
 
-使用 GitHub Actions 构建 OpenWrt 的模板
+
 
 ## 用法
 
@@ -25,7 +25,7 @@
 
 - 创建.config文件和构建 OpenWrt 固件可能需要很长时间。
 - 在创建存储库以构建您自己的固件之前，您可以通过简单地在 GitHub 中搜索Actions-Openwrt来查看其他人是否已经构建了满足您需求的.config文件
-- 注意：开启ssh连接会出现错误，所以请提前本地make menuconfig，把生成的.config文件上传到仓库的根目录后在进行运行自动话脚本，run workflow是ssh连接选择false。
+
 
 
 
