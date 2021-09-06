@@ -8,6 +8,7 @@
 
 ## 此仓库来自于[**P3TERX**](https://p3terx.com)大佬
 
+
 ## 注意：开启ssh连接会出现错误，所以请提前本地make menuconfig，把生成的.config文件上传到仓库的根目录后，再进行运行自动话脚本，在run workflow时ssh连接选项选择false
 
 
@@ -26,7 +27,17 @@
 - 创建.config文件和构建 OpenWrt 固件可能需要很长时间。
 - 在创建存储库以构建您自己的固件之前，您可以通过简单地在 GitHub 中搜索Actions-Openwrt来查看其他人是否已经构建了满足您需求的.config文件
 
+## 内容
 
+- 软件源为lean默认外加[**kenzok**](https://github.com/kenzok8/openwrt-packages)大佬的软件库和依赖
+- openwrt 固件包含以下主要软件
+- luci-app-vssr            ------------------vssr老竭力
+- luci-app-dnsfilter       ------------------基于DNS的广告过滤
+- luci-app-openclash       ------------------openclash图形         
+- luci-app-adguardhome     ------------------去广告 
+- luci-app-passwall        ------------------Lienol大神 
+- luci-theme-argon_new     ------------------二合蓝 紫主题
+- luci-app-ssr-plus        ------------------Lean大神 
 
 
 ## License
