@@ -8,7 +8,7 @@
 
 ## 此仓库来自于[**P3TERX**](https://p3terx.com)大佬
 
-## 注意：开启ssh连接会出现错误，所以请提前本地make menuconfig，把生成的.config文件上传到仓库的根目录后在进行运行自动话脚本，run workflow是ssh连接选择false
+## 注意：开启ssh连接会出现错误，所以请提前本地make menuconfig，把生成的.config文件上传到仓库的根目录后，再进行运行自动话脚本，在run workflow时ssh连接选项选择false
 
 
 
