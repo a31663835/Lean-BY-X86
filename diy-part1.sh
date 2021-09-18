@@ -19,7 +19,15 @@
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
-
+# Moschinadns
+svn co https://github.com/QiuSimons/openwrt-packages/branches/main/mos-chinadns package/new/mos-chinadns
+svn co https://github.com/QiuSimons/openwrt-packages/branches/main/luci-app-moschinadns package/new/luci-app-moschinadns
+# Mosdns
+svn co https://github.com/immortalwrt/packages/trunk/net/mosdns feeds/packages/net/mosdns
+ln -sf ../../../feeds/packages/net/mosdns ./package/feeds/packages/mosdns
+sed -i '/config.yaml/d' feeds/packages/net/mosdns/Makefile
+sed -i '/mosdns-init-openwrt/d' feeds/packages/net/mosdns/Makefile
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns package/new/luci-app-mosdns
 
 
 
