@@ -162,7 +162,8 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         commit: main
         replacesArtifacts: true
-        body_path: release.txt
+        token: ${{ secrets.workflow_token }}
+        #body_path: release.txt
         artifacts: ./artifact/*.zip
         #files: ${{ env.FIRMWARE }}/*         
 
