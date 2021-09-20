@@ -150,22 +150,17 @@ jobs:
         #[ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
 
-    - name: Upload firmware to release
-      uses: softprops/action-gh-release@v1
-      #uses: ncipollo/release-action@v1.8.0
-      if: steps.tag.outputs.status == 'success' && !cancelled()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create release
+      id: create_release    
+      uses: ncipollo/release-action@v1.8.0      
       with:        
         name: OpenWRT-5.4
-        #allowUpdates: true
+        allowUpdates: true
         tag_name: ${{ steps.tag.outputs.release_tag }}
         commit: main
-        #replacesArtifacts: true
-        #token: ${{ secrets.workflow_token }}
-        body_path: release.txt
-        #artifacts: ./artifact/*.zip
-        files: ${{ env.FIRMWARE }}/*.zip         
+        replacesArtifacts: true
+        token: ${{ secrets.workflow_token }}       
+        artifacts: ./artifact/*.zip                 
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
