@@ -156,12 +156,12 @@ jobs:
       with:        
         name: OpenWRT-5.4
         allowUpdates: true
-        tag_name: ${{ steps.tag.outputs.release_tag }}
+        tag: ${{ steps.tag.outputs.release_tag }}
         commit: main
         replacesArtifacts: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #token: ${{ secrets.workflow_token }}       
-        files: ${{ env.FIRMWARE }}/*.zip                 
+        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.workflow_token }}       
+        artifacts: ${{ env.FIRMWARE }}/*.zip                 
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
