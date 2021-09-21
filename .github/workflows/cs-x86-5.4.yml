@@ -159,8 +159,8 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         commit: main
         replacesArtifacts: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #token: ${{ secrets.workflow_token }}       
+        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.workflow_token }}       
         artifacts: ./artifact/*.zip                 
 
     - name: Delete workflow runs
